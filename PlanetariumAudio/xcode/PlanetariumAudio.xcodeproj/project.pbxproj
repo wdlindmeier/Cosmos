@@ -25,6 +25,7 @@
 		A94B9CB6181F681700A27182 /* StreakingStars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A94B9CB4181F681700A27182 /* StreakingStars.cpp */; };
 		A94B9CBA181F697800A27182 /* streaks.frag in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CB8181F697800A27182 /* streaks.frag */; };
 		A94B9CBB181F697800A27182 /* streaks.vert in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CB9181F697800A27182 /* streaks.vert */; };
+		A94B9CBD18201B0A00A27182 /* a_new_error.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CBC18201B0A00A27182 /* a_new_error.m4a */; };
 		A97122CD181C4826006DD64E /* forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97122CC181C4826006DD64E /* forest.jpg */; };
 		A97122D0181C4868006DD64E /* fisheye.frag in Resources */ = {isa = PBXBuildFile; fileRef = A97122CF181C4868006DD64E /* fisheye.frag */; };
 		A97122D2181C4872006DD64E /* fisheye.vert in Resources */ = {isa = PBXBuildFile; fileRef = A97122D1181C4872006DD64E /* fisheye.vert */; };
@@ -62,6 +63,7 @@
 		A94B9CB7181F682B00A27182 /* StreakingStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreakingStars.h; path = ../include/StreakingStars.h; sourceTree = "<group>"; };
 		A94B9CB8181F697800A27182 /* streaks.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = streaks.frag; sourceTree = "<group>"; };
 		A94B9CB9181F697800A27182 /* streaks.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = streaks.vert; sourceTree = "<group>"; };
+		A94B9CBC18201B0A00A27182 /* a_new_error.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = a_new_error.m4a; path = ../resources/a_new_error.m4a; sourceTree = "<group>"; };
 		A97122CC181C4826006DD64E /* forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = forest.jpg; path = ../resources/forest.jpg; sourceTree = "<group>"; };
 		A97122CF181C4868006DD64E /* fisheye.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fisheye.frag; sourceTree = "<group>"; };
 		A97122D1181C4872006DD64E /* fisheye.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fisheye.vert; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A94B9CBC18201B0A00A27182 /* a_new_error.m4a */,
 				9EFA5D23377744399021A9E0 /* CinderApp.icns */,
 				A97122CC181C4826006DD64E /* forest.jpg */,
 				A97122D3181C4FE0006DD64E /* forest_path.png */,
@@ -263,6 +266,7 @@
 				A97122D2181C4872006DD64E /* fisheye.vert in Resources */,
 				A94B9CA8181EE31B00A27182 /* gotta_have_it.mp3 in Resources */,
 				A97122D0181C4868006DD64E /* fisheye.frag in Resources */,
+				A94B9CBD18201B0A00A27182 /* a_new_error.m4a in Resources */,
 				A97122DA181C59A7006DD64E /* texture.vert in Resources */,
 				A97122D9181C59A7006DD64E /* texture.frag in Resources */,
 				A94B9CB3181F3F8300A27182 /* aurora.vert in Resources */,

@@ -153,8 +153,9 @@ void PlanetariumAudioApp::setup()
 
 void PlanetariumAudioApp::loadAudio()
 {
+    fs::path audioPath = getResourcePath("a_new_error.m4a");
     //fs::path audioPath = getResourcePath("gotta_have_it.mp3");
-    fs::path audioPath = getResourcePath("reich.mp3");
+    //fs::path audioPath = getResourcePath("reich.mp3");
     if (!fs::exists(audioPath))
     {
         console() << "ERROR: No audio path found\n";

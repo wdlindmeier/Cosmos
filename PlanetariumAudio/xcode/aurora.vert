@@ -28,7 +28,7 @@ void main( void )
     
     float scalarZ = (1.0-pos.z);
     float scalarX = (0.5 + pos.x) / 1.0;
-    float maxAudioDist = 0.5;
+    float maxAudioDist = 0.25 + (0.25 * scalarX);
     float audioDist = audioValue * maxAudioDist * scalarZ;
     float dist = 0.5 - audioDist;
     float rads = radians(-90.0 + (scalarX * 360.0));
