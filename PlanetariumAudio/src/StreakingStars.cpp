@@ -131,9 +131,10 @@ void StreakingStars::render()
 
     gl::setDefaultShaderVars();
     gl::drawArrays(GL_LINES, 0, numVerts);
-    
+
     mStarsVbo->unbind();
     mStarsVao->unbind();
+    mShaderStreaks->unbind();
 
     gl::popMatrices();
     

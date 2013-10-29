@@ -9,6 +9,7 @@
 #include "cinder/qtime/QuickTimeGl.h"
 #include "AudioAurora.h"
 #include "StreakingStars.h"
+#include "Constellations.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -54,6 +55,7 @@ public:
     qtime::MovieGlRef   mSoundtrack;
     AudioAurora         mAurora;
     StreakingStars      mStreakingStars;
+    Constellations      mConstellations;
     
 };
 
@@ -139,6 +141,7 @@ void PlanetariumAudioApp::setup()
     
     mAurora = AudioAurora(kNumFFTChannels);
     mStreakingStars.load();
+    mConstellations.load();
     
     loadAudio();
     mSoundtrack->seekToStart();
@@ -192,6 +195,7 @@ void PlanetariumAudioApp::update()
     }
     mAurora.update(fftData);
     mStreakingStars.update();
+    mConstellations.update();
 }
 
 void PlanetariumAudioApp::renderAudioHeightmap()
@@ -320,6 +324,8 @@ void PlanetariumAudioApp::draw()
     gl::enableAdditiveBlending();
     drawFBO(mFboStars);
     
+    // Live constellations
+    mConstellations.render();
     
     // Live audio
     renderAudioReaction(false);

@@ -179,6 +179,7 @@ void AudioAurora::render()
     mMeshVbo->unbind();
     
     mFFTTexture->unbind();
+    mShaderAurora->unbind();
     gl::popMatrices();
 
 }
