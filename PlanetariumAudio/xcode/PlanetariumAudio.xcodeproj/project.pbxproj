@@ -29,6 +29,7 @@
 		A94B9CC318203CE700A27182 /* Constellations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A94B9CC118203CE700A27182 /* Constellations.cpp */; };
 		A94B9CC71820479500A27182 /* constellation.frag in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CC51820479500A27182 /* constellation.frag */; };
 		A94B9CC81820479500A27182 /* constellation.vert in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CC61820479500A27182 /* constellation.vert */; };
+		A94B9CCA1820756F00A27182 /* trimmed_a_new_error.aif in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CC91820756F00A27182 /* trimmed_a_new_error.aif */; };
 		A97122CD181C4826006DD64E /* forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97122CC181C4826006DD64E /* forest.jpg */; };
 		A97122D0181C4868006DD64E /* fisheye.frag in Resources */ = {isa = PBXBuildFile; fileRef = A97122CF181C4868006DD64E /* fisheye.frag */; };
 		A97122D2181C4872006DD64E /* fisheye.vert in Resources */ = {isa = PBXBuildFile; fileRef = A97122D1181C4872006DD64E /* fisheye.vert */; };
@@ -72,6 +73,7 @@
 		A94B9CC418203CFA00A27182 /* Constellations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constellations.h; path = ../include/Constellations.h; sourceTree = "<group>"; };
 		A94B9CC51820479500A27182 /* constellation.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = constellation.frag; sourceTree = "<group>"; };
 		A94B9CC61820479500A27182 /* constellation.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = constellation.vert; sourceTree = "<group>"; };
+		A94B9CC91820756F00A27182 /* trimmed_a_new_error.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = trimmed_a_new_error.aif; path = ../resources/trimmed_a_new_error.aif; sourceTree = "<group>"; };
 		A97122CC181C4826006DD64E /* forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = forest.jpg; path = ../resources/forest.jpg; sourceTree = "<group>"; };
 		A97122CF181C4868006DD64E /* fisheye.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fisheye.frag; sourceTree = "<group>"; };
 		A97122D1181C4872006DD64E /* fisheye.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fisheye.vert; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A94B9CC91820756F00A27182 /* trimmed_a_new_error.aif */,
 				A94B9CBC18201B0A00A27182 /* a_new_error.m4a */,
 				9EFA5D23377744399021A9E0 /* CinderApp.icns */,
 				A97122CC181C4826006DD64E /* forest.jpg */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A94B9CA9181EE31B00A27182 /* reich.mp3 in Resources */,
+				A94B9CCA1820756F00A27182 /* trimmed_a_new_error.aif in Resources */,
 				A97122CD181C4826006DD64E /* forest.jpg in Resources */,
 				BA40EBB90DBC4F21BFCE6793 /* CinderApp.icns in Resources */,
 				A97122D2181C4872006DD64E /* fisheye.vert in Resources */,

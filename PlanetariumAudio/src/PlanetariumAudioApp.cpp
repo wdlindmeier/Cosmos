@@ -15,13 +15,13 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-const static float kScreenDimension = 800;
-
 class PlanetariumAudioApp : public AppNative
 {
 
 public:
 
+    void prepareSettings(cinder::app::AppBasic::Settings *settings);
+    
     void loadAudio();
     void loadFBO();
     void loadShaders();
@@ -36,6 +36,7 @@ public:
     void renderAudioReaction(bool useFBO);
     void renderAudioHeightmap();
     void renderStreakingStars(bool useFBO);
+    void renderConstellations(bool useFBO);
     void renderDomeRing();
     void drawFBO(gl::FboRef & fbo);
     
@@ -51,6 +52,7 @@ public:
     
     ci::gl::FboRef      mFboAurora;
     ci::gl::FboRef      mFboStars;
+    ci::gl::FboRef      mFboConstellations;
     
     qtime::MovieGlRef   mSoundtrack;
     AudioAurora         mAurora;
@@ -58,6 +60,18 @@ public:
     Constellations      mConstellations;
     
 };
+
+void PlanetariumAudioApp::prepareSettings(cinder::app::AppBasic::Settings *settings)
+{
+    settings->setFullScreen(true);
+    /*
+#ifdef DEBUG
+    settings->setWindowSize(kScreenDimension, kScreenDimension);
+#else
+    settings->setFullScreen(true);
+#endif
+    */
+}
 
 void PlanetariumAudioApp::loadShaders()
 {
@@ -82,6 +96,10 @@ void PlanetariumAudioApp::loadFBO()
     mFboAurora = ci::gl::Fbo::create(kScreenDimension,
                                      kScreenDimension,
                                      format);
+    
+    mFboConstellations = ci::gl::Fbo::create(kScreenDimension,
+                                             kScreenDimension,
+                                             format);
     
     GLfloat data[8+8+16]; // verts, texCoords, colors
     GLfloat *verts = data, *texCoords = data + 8, *color = data + 16;
@@ -136,8 +154,14 @@ void PlanetariumAudioApp::loadFBO()
 
 void PlanetariumAudioApp::setup()
 {
-    // setFullScreen(true);
-    setWindowSize(kScreenDimension, kScreenDimension);
+    kScreenDimension = getWindowHeight();
+
+    //setWindowSize(kScreenDimension, kScreenDimension);
+#ifdef DEBUG
+    //setWindowSize(kScreenDimension, kScreenDimension);
+#else
+    //setFullScreen(true);
+#endif
     
     mAurora = AudioAurora(kNumFFTChannels);
     mStreakingStars.load();
@@ -156,7 +180,8 @@ void PlanetariumAudioApp::setup()
 
 void PlanetariumAudioApp::loadAudio()
 {
-    fs::path audioPath = getResourcePath("a_new_error.m4a");
+    fs::path audioPath = getResourcePath("trimmed_a_new_error.aif");
+    //fs::path audioPath = getResourcePath("a_new_error.m4a");
     //fs::path audioPath = getResourcePath("gotta_have_it.mp3");
     //fs::path audioPath = getResourcePath("reich.mp3");
     if (!fs::exists(audioPath))
@@ -195,14 +220,14 @@ void PlanetariumAudioApp::update()
     }
     mAurora.update(fftData);
     mStreakingStars.update();
-    mConstellations.update();
+    mConstellations.update(fftData);
 }
 
 void PlanetariumAudioApp::renderAudioHeightmap()
 {
     gl::pushMatrices();
     gl::bindStockShader(gl::ShaderDef().color());
-    Vec2i texPosition = getWindowCenter();
+    Vec2i texPosition = Vec2f(kScreenDimension * 0.5, kScreenDimension * 0.5);//getWindowCenter();
     texPosition.x -= kNumFFTChannels * 0.5;
     texPosition.y -= kNumFFTChannels * 0.5;
     Rectf screenRect(0, 0, kNumFFTChannels, kNumFFTChannels);
@@ -214,15 +239,42 @@ void PlanetariumAudioApp::clearFBO(gl::FboRef & fbo, const float alpha)
 {
     fbo->bindFramebuffer();
     gl::enableAlphaBlending();
+    // gl::enableAdditiveBlending();
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
     gl::pushMatrices();
 
     gl::bindStockShader(gl::ShaderDef().color());
     gl::color(0.0f, 0.0f, 0.0f, alpha);
-    gl::drawSolidRect(getWindowBounds());
+    gl::drawSolidRect(Rectf(0,0,kScreenDimension,kScreenDimension));
 
     gl::popMatrices();
     gl::disableAlphaBlending();
     fbo->unbindFramebuffer();
+}
+
+void PlanetariumAudioApp::renderConstellations(bool useFBO)
+{
+    gl::enableAlphaBlending();
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    if (useFBO)
+    {
+        mFboConstellations->bindFramebuffer();
+        //gl::enableAlphaBlending();
+    }
+    else
+    {
+        //gl::enableAdditiveBlending();
+    }
+    gl::pushMatrices();
+    mConstellations.render();
+    gl::popMatrices();
+    if (useFBO)
+    {
+        mFboConstellations->unbindFramebuffer();
+    }
+    
+    gl::disableAlphaBlending();
 }
 
 void PlanetariumAudioApp::renderAudioReaction(bool useFBO)
@@ -295,7 +347,7 @@ void PlanetariumAudioApp::renderDomeRing()
 {
     gl::bindStockShader(gl::ShaderDef().color());
     gl::color(0.2f, 0.2f, 0.2f, 1.0f);
-    gl::drawSolidCircle(getWindowCenter(), kScreenDimension * 0.5);
+    gl::drawSolidCircle(Vec2f(kScreenDimension*0.5,kScreenDimension*0.5), kScreenDimension * 0.5);
 }
 
 void PlanetariumAudioApp::draw()
@@ -319,13 +371,18 @@ void PlanetariumAudioApp::draw()
     clearFBO(mFboStars, alpha);
     renderStreakingStars(true);
     
+    if (alpha < 1) alpha = 0.05;
+    clearFBO(mFboConstellations, alpha);
+    renderConstellations(true);
+    
     drawFBO(mFboAurora);
     
     gl::enableAdditiveBlending();
     drawFBO(mFboStars);
-    
+    drawFBO(mFboConstellations);
+
     // Live constellations
-    mConstellations.render();
+    renderConstellations(false);
     
     // Live audio
     renderAudioReaction(false);

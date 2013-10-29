@@ -3,6 +3,11 @@
 #endif
 
 const static int kNumFFTChannels = 64;
+#ifdef DEBUG
+static float kScreenDimension = 800;
+#else
+static float kScreenDimension = 1200;
+#endif
 
 #if defined( __cplusplus )
 

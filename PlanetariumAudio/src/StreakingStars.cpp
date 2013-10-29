@@ -97,7 +97,7 @@ void StreakingStars::loadMesh()
 
 void StreakingStars::update()
 {
-    mTimer += 0.01;//001f;
+    mTimer += 0.02;//001f;
 }
 
 void StreakingStars::render()
@@ -109,7 +109,7 @@ void StreakingStars::render()
     //gl::rotate(mTimer, 0, 0, 1);
     gl::setMatrices( mCam );
     
-    float scale = getWindowHeight();
+    float scale = kScreenDimension;//getWindowHeight();
     
     float transX = 0;//-1;//cos(mTimer*0.05);
     float transY = 0;//1;//sin(mTimer*0.05);
