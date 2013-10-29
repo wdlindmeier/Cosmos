@@ -109,16 +109,17 @@ void StreakingStars::render()
     //gl::rotate(mTimer, 0, 0, 1);
     gl::setMatrices( mCam );
     
-    float scale = kScreenDimension;//getWindowHeight();
+    //float scale = kScreenDimension;//getWindowHeight();
     
     float transX = 0;//-1;//cos(mTimer*0.05);
     float transY = 0;//1;//sin(mTimer*0.05);
-    gl::translate(Vec2f(transX * scale * 0.5, transY * scale * 0.5));
+    gl::translate(Vec2f(transX * getWindowWidth() * 0.5,
+                        transY * getWindowHeight() * 0.5));
     
     // 0..1 -> 0..5000
-    gl::scale(scale,
-              scale,
-              scale);
+    gl::scale(getWindowWidth(),
+              getWindowHeight(),
+              getWindowHeight());
     
     gl::rotate(mTimer, 0, 0, 1);
 

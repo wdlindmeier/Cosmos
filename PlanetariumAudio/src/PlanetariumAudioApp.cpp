@@ -89,16 +89,16 @@ void PlanetariumAudioApp::loadFBO()
 {
     ci::gl::Fbo::Format format;
     format.samples(8);
-    mFboStars = ci::gl::Fbo::create(kScreenDimension,
-                                    kScreenDimension,
+    mFboStars = ci::gl::Fbo::create(getWindowWidth(),
+                                    getWindowHeight(),
                                     format);
     
-    mFboAurora = ci::gl::Fbo::create(kScreenDimension,
-                                     kScreenDimension,
+    mFboAurora = ci::gl::Fbo::create(getWindowWidth(),
+                                     getWindowHeight(),
                                      format);
     
-    mFboConstellations = ci::gl::Fbo::create(kScreenDimension,
-                                             kScreenDimension,
+    mFboConstellations = ci::gl::Fbo::create(getWindowWidth(),
+                                             getWindowHeight(),
                                              format);
     
     GLfloat data[8+8+16]; // verts, texCoords, colors
@@ -154,7 +154,7 @@ void PlanetariumAudioApp::loadFBO()
 
 void PlanetariumAudioApp::setup()
 {
-    kScreenDimension = getWindowHeight();
+    //kScreenDimension = getWindowHeight();
 
     //setWindowSize(kScreenDimension, kScreenDimension);
 #ifdef DEBUG
@@ -227,7 +227,7 @@ void PlanetariumAudioApp::renderAudioHeightmap()
 {
     gl::pushMatrices();
     gl::bindStockShader(gl::ShaderDef().color());
-    Vec2i texPosition = Vec2f(kScreenDimension * 0.5, kScreenDimension * 0.5);//getWindowCenter();
+    Vec2i texPosition = getWindowCenter();
     texPosition.x -= kNumFFTChannels * 0.5;
     texPosition.y -= kNumFFTChannels * 0.5;
     Rectf screenRect(0, 0, kNumFFTChannels, kNumFFTChannels);
@@ -246,7 +246,7 @@ void PlanetariumAudioApp::clearFBO(gl::FboRef & fbo, const float alpha)
 
     gl::bindStockShader(gl::ShaderDef().color());
     gl::color(0.0f, 0.0f, 0.0f, alpha);
-    gl::drawSolidRect(Rectf(0,0,kScreenDimension,kScreenDimension));
+    gl::drawSolidRect(getWindowBounds());
 
     gl::popMatrices();
     gl::disableAlphaBlending();
@@ -320,7 +320,7 @@ void PlanetariumAudioApp::drawFBO(gl::FboRef & fbo)
 {
     gl::pushMatrices();
     
-    gl::scale(kScreenDimension, kScreenDimension);
+    gl::scale(getWindowWidth(), getWindowHeight());
     
     mFisheyeShader->bind();
     fbo->bindTexture();
@@ -347,7 +347,8 @@ void PlanetariumAudioApp::renderDomeRing()
 {
     gl::bindStockShader(gl::ShaderDef().color());
     gl::color(0.2f, 0.2f, 0.2f, 1.0f);
-    gl::drawSolidCircle(Vec2f(kScreenDimension*0.5,kScreenDimension*0.5), kScreenDimension * 0.5);
+    gl::drawSolidCircle(getWindowCenter(),
+                        getWindowHeight() * 0.5);
 }
 
 void PlanetariumAudioApp::draw()
