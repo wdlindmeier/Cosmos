@@ -20,23 +20,29 @@
 		A94B9CA9181EE31B00A27182 /* reich.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CA7181EE31B00A27182 /* reich.mp3 */; };
 		A94B9CAB181EE3D400A27182 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94B9CAA181EE3D400A27182 /* QuickTime.framework */; };
 		A94B9CAE181F35F500A27182 /* AudioAurora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A94B9CAC181F35F500A27182 /* AudioAurora.cpp */; };
-		A94B9CB2181F3F8300A27182 /* aurora.frag in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CB0181F3F8300A27182 /* aurora.frag */; };
-		A94B9CB3181F3F8300A27182 /* aurora.vert in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CB1181F3F8300A27182 /* aurora.vert */; };
 		A94B9CB6181F681700A27182 /* StreakingStars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A94B9CB4181F681700A27182 /* StreakingStars.cpp */; };
-		A94B9CBA181F697800A27182 /* streaks.frag in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CB8181F697800A27182 /* streaks.frag */; };
-		A94B9CBB181F697800A27182 /* streaks.vert in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CB9181F697800A27182 /* streaks.vert */; };
 		A94B9CBD18201B0A00A27182 /* a_new_error.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CBC18201B0A00A27182 /* a_new_error.m4a */; };
 		A94B9CC318203CE700A27182 /* Constellations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A94B9CC118203CE700A27182 /* Constellations.cpp */; };
-		A94B9CC71820479500A27182 /* constellation.frag in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CC51820479500A27182 /* constellation.frag */; };
-		A94B9CC81820479500A27182 /* constellation.vert in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CC61820479500A27182 /* constellation.vert */; };
 		A94B9CCA1820756F00A27182 /* trimmed_a_new_error.aif in Resources */ = {isa = PBXBuildFile; fileRef = A94B9CC91820756F00A27182 /* trimmed_a_new_error.aif */; };
 		A97122CD181C4826006DD64E /* forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97122CC181C4826006DD64E /* forest.jpg */; };
-		A97122D0181C4868006DD64E /* fisheye.frag in Resources */ = {isa = PBXBuildFile; fileRef = A97122CF181C4868006DD64E /* fisheye.frag */; };
-		A97122D2181C4872006DD64E /* fisheye.vert in Resources */ = {isa = PBXBuildFile; fileRef = A97122D1181C4872006DD64E /* fisheye.vert */; };
 		A97122D4181C4FE0006DD64E /* forest_path.png in Resources */ = {isa = PBXBuildFile; fileRef = A97122D3181C4FE0006DD64E /* forest_path.png */; };
 		A97122D6181C5903006DD64E /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A97122D5181C5903006DD64E /* particle.png */; };
-		A97122D9181C59A7006DD64E /* texture.frag in Resources */ = {isa = PBXBuildFile; fileRef = A97122D7181C59A7006DD64E /* texture.frag */; };
-		A97122DA181C59A7006DD64E /* texture.vert in Resources */ = {isa = PBXBuildFile; fileRef = A97122D8181C59A7006DD64E /* texture.vert */; };
+		A9B50B0C182347FB00C077BD /* atat.obj in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B09182347FB00C077BD /* atat.obj */; };
+		A9B50B0D182347FB00C077BD /* tank.obj in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B0A182347FB00C077BD /* tank.obj */; };
+		A9B50B0E182347FB00C077BD /* uav.obj in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B0B182347FB00C077BD /* uav.obj */; };
+		A9B50B111823483900C077BD /* FlickerObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B50B0F1823483900C077BD /* FlickerObj.cpp */; };
+		A9B50B1F1823495C00C077BD /* aurora.frag in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B131823495C00C077BD /* aurora.frag */; };
+		A9B50B201823495C00C077BD /* aurora.vert in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B141823495C00C077BD /* aurora.vert */; };
+		A9B50B211823495C00C077BD /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B151823495C00C077BD /* basic.frag */; };
+		A9B50B221823495C00C077BD /* basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B161823495C00C077BD /* basic.vert */; };
+		A9B50B231823495C00C077BD /* constellation.frag in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B171823495C00C077BD /* constellation.frag */; };
+		A9B50B241823495C00C077BD /* constellation.vert in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B181823495C00C077BD /* constellation.vert */; };
+		A9B50B251823495C00C077BD /* fisheye.frag in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B191823495C00C077BD /* fisheye.frag */; };
+		A9B50B261823495C00C077BD /* fisheye.vert in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B1A1823495C00C077BD /* fisheye.vert */; };
+		A9B50B271823495C00C077BD /* streaks.frag in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B1B1823495C00C077BD /* streaks.frag */; };
+		A9B50B281823495C00C077BD /* streaks.vert in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B1C1823495C00C077BD /* streaks.vert */; };
+		A9B50B291823495C00C077BD /* texture.frag in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B1D1823495C00C077BD /* texture.frag */; };
+		A9B50B2A1823495C00C077BD /* texture.vert in Resources */ = {isa = PBXBuildFile; fileRef = A9B50B1E1823495C00C077BD /* texture.vert */; };
 		BA40EBB90DBC4F21BFCE6793 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9EFA5D23377744399021A9E0 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
@@ -61,26 +67,33 @@
 		A94B9CAA181EE3D400A27182 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
 		A94B9CAC181F35F500A27182 /* AudioAurora.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioAurora.cpp; path = ../src/AudioAurora.cpp; sourceTree = "<group>"; };
 		A94B9CAF181F360C00A27182 /* AudioAurora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioAurora.h; path = ../include/AudioAurora.h; sourceTree = "<group>"; };
-		A94B9CB0181F3F8300A27182 /* aurora.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = aurora.frag; sourceTree = "<group>"; };
-		A94B9CB1181F3F8300A27182 /* aurora.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = aurora.vert; sourceTree = "<group>"; };
 		A94B9CB4181F681700A27182 /* StreakingStars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StreakingStars.cpp; path = ../src/StreakingStars.cpp; sourceTree = "<group>"; };
 		A94B9CB7181F682B00A27182 /* StreakingStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreakingStars.h; path = ../include/StreakingStars.h; sourceTree = "<group>"; };
-		A94B9CB8181F697800A27182 /* streaks.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = streaks.frag; sourceTree = "<group>"; };
-		A94B9CB9181F697800A27182 /* streaks.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = streaks.vert; sourceTree = "<group>"; };
 		A94B9CBC18201B0A00A27182 /* a_new_error.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = a_new_error.m4a; path = ../resources/a_new_error.m4a; sourceTree = "<group>"; };
 		A94B9CC018203B9E00A27182 /* Asterisms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Asterisms.h; path = ../include/Asterisms.h; sourceTree = "<group>"; };
 		A94B9CC118203CE700A27182 /* Constellations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constellations.cpp; path = ../src/Constellations.cpp; sourceTree = "<group>"; };
 		A94B9CC418203CFA00A27182 /* Constellations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constellations.h; path = ../include/Constellations.h; sourceTree = "<group>"; };
-		A94B9CC51820479500A27182 /* constellation.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = constellation.frag; sourceTree = "<group>"; };
-		A94B9CC61820479500A27182 /* constellation.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = constellation.vert; sourceTree = "<group>"; };
 		A94B9CC91820756F00A27182 /* trimmed_a_new_error.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = trimmed_a_new_error.aif; path = ../resources/trimmed_a_new_error.aif; sourceTree = "<group>"; };
 		A97122CC181C4826006DD64E /* forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = forest.jpg; path = ../resources/forest.jpg; sourceTree = "<group>"; };
-		A97122CF181C4868006DD64E /* fisheye.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fisheye.frag; sourceTree = "<group>"; };
-		A97122D1181C4872006DD64E /* fisheye.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fisheye.vert; sourceTree = "<group>"; };
 		A97122D3181C4FE0006DD64E /* forest_path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forest_path.png; path = ../resources/forest_path.png; sourceTree = "<group>"; };
 		A97122D5181C5903006DD64E /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particle.png; path = ../resources/particle.png; sourceTree = "<group>"; };
-		A97122D7181C59A7006DD64E /* texture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.frag; sourceTree = "<group>"; };
-		A97122D8181C59A7006DD64E /* texture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.vert; sourceTree = "<group>"; };
+		A9B50B09182347FB00C077BD /* atat.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = atat.obj; path = ../resources/atat.obj; sourceTree = "<group>"; };
+		A9B50B0A182347FB00C077BD /* tank.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = tank.obj; path = ../resources/tank.obj; sourceTree = "<group>"; };
+		A9B50B0B182347FB00C077BD /* uav.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = uav.obj; path = ../resources/uav.obj; sourceTree = "<group>"; };
+		A9B50B0F1823483900C077BD /* FlickerObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlickerObj.cpp; path = ../src/FlickerObj.cpp; sourceTree = "<group>"; };
+		A9B50B121823485D00C077BD /* FlickerObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickerObj.h; path = ../include/FlickerObj.h; sourceTree = "<group>"; };
+		A9B50B131823495C00C077BD /* aurora.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = aurora.frag; path = ../resources/aurora.frag; sourceTree = "<group>"; };
+		A9B50B141823495C00C077BD /* aurora.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = aurora.vert; path = ../resources/aurora.vert; sourceTree = "<group>"; };
+		A9B50B151823495C00C077BD /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.frag; path = ../resources/basic.frag; sourceTree = "<group>"; };
+		A9B50B161823495C00C077BD /* basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.vert; path = ../resources/basic.vert; sourceTree = "<group>"; };
+		A9B50B171823495C00C077BD /* constellation.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = constellation.frag; path = ../resources/constellation.frag; sourceTree = "<group>"; };
+		A9B50B181823495C00C077BD /* constellation.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = constellation.vert; path = ../resources/constellation.vert; sourceTree = "<group>"; };
+		A9B50B191823495C00C077BD /* fisheye.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fisheye.frag; path = ../resources/fisheye.frag; sourceTree = "<group>"; };
+		A9B50B1A1823495C00C077BD /* fisheye.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fisheye.vert; path = ../resources/fisheye.vert; sourceTree = "<group>"; };
+		A9B50B1B1823495C00C077BD /* streaks.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = streaks.frag; path = ../resources/streaks.frag; sourceTree = "<group>"; };
+		A9B50B1C1823495C00C077BD /* streaks.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = streaks.vert; path = ../resources/streaks.vert; sourceTree = "<group>"; };
+		A9B50B1D1823495C00C077BD /* texture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = texture.frag; path = ../resources/texture.frag; sourceTree = "<group>"; };
+		A9B50B1E1823495C00C077BD /* texture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = texture.vert; path = ../resources/texture.vert; sourceTree = "<group>"; };
 		F66CC3F473644DAA88790B3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +129,7 @@
 			children = (
 				A94B9CAC181F35F500A27182 /* AudioAurora.cpp */,
 				A94B9CC118203CE700A27182 /* Constellations.cpp */,
+				A9B50B0F1823483900C077BD /* FlickerObj.cpp */,
 				1080E2403DC94ACBA133A152 /* PlanetariumAudioApp.cpp */,
 				A94B9CB4181F681700A27182 /* StreakingStars.cpp */,
 			);
@@ -174,6 +188,7 @@
 				A94B9CC018203B9E00A27182 /* Asterisms.h */,
 				A94B9CAF181F360C00A27182 /* AudioAurora.h */,
 				A94B9CC418203CFA00A27182 /* Constellations.h */,
+				A9B50B121823485D00C077BD /* FlickerObj.h */,
 				A1C52ECC2FF54413AB5F99AD /* PlanetariumAudio_Prefix.pch */,
 				4EFD500D484D45318366539B /* Resources.h */,
 				A94B9CB7181F682B00A27182 /* StreakingStars.h */,
@@ -184,6 +199,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9B50B09182347FB00C077BD /* atat.obj */,
+				A9B50B0A182347FB00C077BD /* tank.obj */,
+				A9B50B0B182347FB00C077BD /* uav.obj */,
 				A94B9CC91820756F00A27182 /* trimmed_a_new_error.aif */,
 				A94B9CBC18201B0A00A27182 /* a_new_error.m4a */,
 				9EFA5D23377744399021A9E0 /* CinderApp.icns */,
@@ -210,16 +228,18 @@
 		A97122CE181C484E006DD64E /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				A94B9CB0181F3F8300A27182 /* aurora.frag */,
-				A94B9CB1181F3F8300A27182 /* aurora.vert */,
-				A94B9CC51820479500A27182 /* constellation.frag */,
-				A94B9CC61820479500A27182 /* constellation.vert */,
-				A97122CF181C4868006DD64E /* fisheye.frag */,
-				A97122D1181C4872006DD64E /* fisheye.vert */,
-				A94B9CB8181F697800A27182 /* streaks.frag */,
-				A94B9CB9181F697800A27182 /* streaks.vert */,
-				A97122D7181C59A7006DD64E /* texture.frag */,
-				A97122D8181C59A7006DD64E /* texture.vert */,
+				A9B50B131823495C00C077BD /* aurora.frag */,
+				A9B50B141823495C00C077BD /* aurora.vert */,
+				A9B50B151823495C00C077BD /* basic.frag */,
+				A9B50B161823495C00C077BD /* basic.vert */,
+				A9B50B171823495C00C077BD /* constellation.frag */,
+				A9B50B181823495C00C077BD /* constellation.vert */,
+				A9B50B191823495C00C077BD /* fisheye.frag */,
+				A9B50B1A1823495C00C077BD /* fisheye.vert */,
+				A9B50B1B1823495C00C077BD /* streaks.frag */,
+				A9B50B1C1823495C00C077BD /* streaks.vert */,
+				A9B50B1D1823495C00C077BD /* texture.frag */,
+				A9B50B1E1823495C00C077BD /* texture.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -276,24 +296,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B50B0E182347FB00C077BD /* uav.obj in Resources */,
 				A94B9CA9181EE31B00A27182 /* reich.mp3 in Resources */,
 				A94B9CCA1820756F00A27182 /* trimmed_a_new_error.aif in Resources */,
 				A97122CD181C4826006DD64E /* forest.jpg in Resources */,
 				BA40EBB90DBC4F21BFCE6793 /* CinderApp.icns in Resources */,
-				A97122D2181C4872006DD64E /* fisheye.vert in Resources */,
 				A94B9CA8181EE31B00A27182 /* gotta_have_it.mp3 in Resources */,
-				A97122D0181C4868006DD64E /* fisheye.frag in Resources */,
 				A94B9CBD18201B0A00A27182 /* a_new_error.m4a in Resources */,
-				A97122DA181C59A7006DD64E /* texture.vert in Resources */,
-				A97122D9181C59A7006DD64E /* texture.frag in Resources */,
-				A94B9CB3181F3F8300A27182 /* aurora.vert in Resources */,
-				A94B9CB2181F3F8300A27182 /* aurora.frag in Resources */,
-				A94B9CBB181F697800A27182 /* streaks.vert in Resources */,
-				A94B9CBA181F697800A27182 /* streaks.frag in Resources */,
-				A94B9CC81820479500A27182 /* constellation.vert in Resources */,
-				A94B9CC71820479500A27182 /* constellation.frag in Resources */,
+				A9B50B0C182347FB00C077BD /* atat.obj in Resources */,
+				A9B50B0D182347FB00C077BD /* tank.obj in Resources */,
 				A97122D4181C4FE0006DD64E /* forest_path.png in Resources */,
 				A97122D6181C5903006DD64E /* particle.png in Resources */,
+				A9B50B201823495C00C077BD /* aurora.vert in Resources */,
+				A9B50B271823495C00C077BD /* streaks.frag in Resources */,
+				A9B50B221823495C00C077BD /* basic.vert in Resources */,
+				A9B50B251823495C00C077BD /* fisheye.frag in Resources */,
+				A9B50B281823495C00C077BD /* streaks.vert in Resources */,
+				A9B50B211823495C00C077BD /* basic.frag in Resources */,
+				A9B50B1F1823495C00C077BD /* aurora.frag in Resources */,
+				A9B50B2A1823495C00C077BD /* texture.vert in Resources */,
+				A9B50B291823495C00C077BD /* texture.frag in Resources */,
+				A9B50B261823495C00C077BD /* fisheye.vert in Resources */,
+				A9B50B241823495C00C077BD /* constellation.vert in Resources */,
+				A9B50B231823495C00C077BD /* constellation.frag in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +333,7 @@
 				A94B9CC318203CE700A27182 /* Constellations.cpp in Sources */,
 				A94B9CB6181F681700A27182 /* StreakingStars.cpp in Sources */,
 				5E9340FC195243E9B94C2797 /* PlanetariumAudioApp.cpp in Sources */,
+				A9B50B111823483900C077BD /* FlickerObj.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

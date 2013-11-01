@@ -117,7 +117,7 @@ void StreakingStars::render()
                         transY * getWindowHeight() * 0.5));
     
     // 0..1 -> 0..5000
-    gl::scale(getWindowWidth(),
+    gl::scale(getWindowHeight(),
               getWindowHeight(),
               getWindowHeight());
     

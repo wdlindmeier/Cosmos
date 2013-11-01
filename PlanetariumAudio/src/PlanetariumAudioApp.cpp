@@ -10,6 +10,7 @@
 #include "AudioAurora.h"
 #include "StreakingStars.h"
 #include "Constellations.h"
+#include "FlickerObj.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -58,15 +59,19 @@ public:
     AudioAurora         mAurora;
     StreakingStars      mStreakingStars;
     Constellations      mConstellations;
-    
+
+    /*
+    FlickerObj          mAtAt;
+    */
 };
 
 void PlanetariumAudioApp::prepareSettings(cinder::app::AppBasic::Settings *settings)
 {
     settings->setFullScreen(true);
+    
     /*
 #ifdef DEBUG
-    settings->setWindowSize(kScreenDimension, kScreenDimension);
+    settings->setWindowSize(800, 800);
 #else
     settings->setFullScreen(true);
 #endif
@@ -154,18 +159,20 @@ void PlanetariumAudioApp::loadFBO()
 
 void PlanetariumAudioApp::setup()
 {
-    //kScreenDimension = getWindowHeight();
-
-    //setWindowSize(kScreenDimension, kScreenDimension);
-#ifdef DEBUG
-    //setWindowSize(kScreenDimension, kScreenDimension);
-#else
-    //setFullScreen(true);
-#endif
-    
     mAurora = AudioAurora(kNumFFTChannels);
     mStreakingStars.load();
     mConstellations.load();
+    
+/*
+    // This is an example of adding "modern" constellations to the scene
+    // which I would have liked to do for the presentation, but I
+    // didn't have enough time to get the content together.
+ 
+    mAtAt.load("atat.obj");
+    mAtAt.setGlScaleTranslateAndRotate(Vec3f(1, 1, 1),
+                                       Vec3f(0, 40, 0),
+                                       Vec3f(0, -90, 0));
+*/
     
     loadAudio();
     mSoundtrack->seekToStart();
@@ -221,6 +228,10 @@ void PlanetariumAudioApp::update()
     mAurora.update(fftData);
     mStreakingStars.update();
     mConstellations.update(fftData);
+
+    /*
+    mAtAt.update(fftData);
+    */
 }
 
 void PlanetariumAudioApp::renderAudioHeightmap()
@@ -239,9 +250,7 @@ void PlanetariumAudioApp::clearFBO(gl::FboRef & fbo, const float alpha)
 {
     fbo->bindFramebuffer();
     gl::enableAlphaBlending();
-    // gl::enableAdditiveBlending();
-    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    
+
     gl::pushMatrices();
 
     gl::bindStockShader(gl::ShaderDef().color());
@@ -260,12 +269,8 @@ void PlanetariumAudioApp::renderConstellations(bool useFBO)
     if (useFBO)
     {
         mFboConstellations->bindFramebuffer();
-        //gl::enableAlphaBlending();
     }
-    else
-    {
-        //gl::enableAdditiveBlending();
-    }
+    
     gl::pushMatrices();
     mConstellations.render();
     gl::popMatrices();
@@ -384,6 +389,11 @@ void PlanetariumAudioApp::draw()
 
     // Live constellations
     renderConstellations(false);
+    
+    /*
+     // TEST: draw AtAt
+     mAtAt.render();
+    */
     
     // Live audio
     renderAudioReaction(false);
