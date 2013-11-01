@@ -45,9 +45,7 @@ public:
 
     gl::GlslProgRef     mFisheyeShader;
     gl::GlslProgRef     mTextureShader;
-    
-    gl::TextureRef      mParticleTexture;
-    
+
     ci::gl::VaoRef      mScreenVao;
     ci::gl::VboRef      mScreenVbo;
     
@@ -179,8 +177,6 @@ void PlanetariumAudioApp::setup()
     mSoundtrack->play();
 
     loadShaders();
-    
-    mParticleTexture = gl::Texture::create(loadImage(getResourcePath("particle.png")));
     
     loadFBO();
 }
