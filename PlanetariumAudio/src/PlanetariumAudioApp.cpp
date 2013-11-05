@@ -65,15 +65,13 @@ public:
 
 void PlanetariumAudioApp::prepareSettings(cinder::app::AppBasic::Settings *settings)
 {
-    settings->setFullScreen(true);
-    
-    /*
+
 #ifdef DEBUG
     settings->setWindowSize(800, 800);
 #else
     settings->setFullScreen(true);
 #endif
-    */
+
 }
 
 void PlanetariumAudioApp::loadShaders()
