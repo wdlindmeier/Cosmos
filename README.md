@@ -9,16 +9,16 @@ This sketch is inspired by the [Aurora](http://en.wikipedia.org/wiki/Aurora_Bore
 
 ###Documentation
 
-Here are some long exposure photos taken by [Max](http://maxmadesign.com/) at the planetarium:  
-
-![image](https://raw.github.com/wdlindmeier/Cosmos/master/dome_shots.jpg)
-
-  
 Playing on a flat screen:  
 
 ![image](https://raw.github.com/wdlindmeier/Cosmos/master/screenshot.jpg)
   
 
+Here are some long exposure photos taken by [Max](http://maxmadesign.com/) at the planetarium:  
+
+![image](https://raw.github.com/wdlindmeier/Cosmos/master/dome_shots.jpg)
+
+  
 This is a screenshot of the simple shader test (found in FisheyeShaderTest). It warps content to the contours of the dome using a glsl shader. I didn't end up using this code in my final work, but it may be useful to someone else.
 
 ![image](https://raw.github.com/wdlindmeier/Cosmos/master/shader_test.jpg)
