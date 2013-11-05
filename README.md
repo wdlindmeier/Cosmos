@@ -24,3 +24,9 @@ This is a screenshot of the simple shader test (found in FisheyeShaderTest). It 
 ![image](https://raw.github.com/wdlindmeier/Cosmos/master/shader_test.jpg)
 
 Written in Cinder 0.8.6 (dev). 
+
+###Contents
+
+* **FisheyeShaderTest**: A basic app the warps content for the dome. 
+* **PlanetariumAudio.app**: A build of the final audio visualizer
+* **PlanetariumAudio**: The source for the audio visualizer
